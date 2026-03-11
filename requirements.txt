@@ -1,0 +1,11 @@
+ultralytics
+opencv-python
+fastapi
+uvicorn
+sqlalchemy
+streamlit
+pandas
+plotly
+requests
+numpy
+torch
