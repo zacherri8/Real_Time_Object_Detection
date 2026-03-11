@@ -6,7 +6,7 @@ This project performs real-time object detection and displays detections in a da
 
 1. Clone the repository
 
-git clone https://github.com/username/real-time-object-detection.git
+git clone https://github.com/zacherri8/Real_Time_Object_Detection.git
 
 cd real-time-object-detection
 
@@ -29,3 +29,4 @@ Run this: python cv_engine/camera.py
 Terminal 3 – Start Dashboard
 
 Run this: streamlit run dashboard/dashboard.py
+
