@@ -1,0 +1,31 @@
+**Project Title: Real Time Object Detection Dashboard**
+
+This project performs real-time object detection and displays detections in a dashboard.
+
+## Installation
+
+1. Clone the repository
+
+git clone https://github.com/username/real-time-object-detection.git
+
+cd real-time-object-detection
+
+2. Install dependencies
+
+pip install -r requirements.txt
+
+## Running the Project
+
+Open **3 terminals**
+
+Terminal 1 – Start Backend API
+
+Run this: uvicorn backend.main:app --reload
+
+Terminal 2 – Start Computer Vision Engine
+
+Run this: python cv_engine/camera.py
+
+Terminal 3 – Start Dashboard
+
+Run this: streamlit run dashboard/dashboard.py
