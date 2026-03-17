@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from database import engine, SessionLocal
-from models import Base, Detection
+from backend.database import engine, SessionLocal
+from backend.models import Base, Detection
 
 app = FastAPI()
 

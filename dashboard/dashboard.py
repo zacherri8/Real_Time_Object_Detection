@@ -35,7 +35,7 @@ if len(df) > 0:
     st.subheader("Detection Heatmap (Advanced)")
     if 'bbox' in df.columns:
         # Heatmap: visualize spatial distribution of detections
-        heatmap = np.zeros((480, 640))  # Adjust to your frame size
+        heatmap = np.zeros((480, 640))  # Adjustable to frame size
         for bbox_str in df['bbox']:
             try:
                 bbox = eval(bbox_str)

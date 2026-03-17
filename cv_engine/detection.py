@@ -1,10 +1,10 @@
 from ultralytics import YOLO
 import cv2
 import requests
-from camera import start_camera
-from tracker import track_objects
+from cv_engine.camera import start_camera
+from cv_engine.tracker import track_objects
 
-model = YOLO("../models/yolov8n.pt")
+model = YOLO("yolov8n.pt")
 
 API_URL = "http://127.0.0.1:8000/detection"
 
@@ -12,6 +12,7 @@ cap = start_camera()
 
 while True:
     ret, frame = cap.read()
+    frame = cv2.resize(frame, (640, 480))
     if not ret:
         break
 
