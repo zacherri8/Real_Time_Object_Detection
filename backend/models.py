@@ -11,4 +11,7 @@ class Detection(Base):
     object_type = Column(String)
     confidence = Column(Float)
     track_id = Column(Integer)
-    bbox = Column(String)  # Store bbox as stringified list
+    bbox = Column(String)
+    zone = Column(String, default="none")
+    entry_count = Column(Integer, default=0)
+    exit_count = Column(Integer, default=0)

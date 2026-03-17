@@ -10,16 +10,23 @@ Base.metadata.create_all(bind=engine)
 def home():
     return {"status": "API running"}
 
+
+# -------------------- POST --------------------
 @app.post("/detection")
 def add_detection(data: dict):
 
     db = SessionLocal()
 
     new_det = Detection(
-        object_type=data["object_type"],
+        object_type=data["object"],
         confidence=data["confidence"],
         track_id=data.get("track_id"),
-        bbox=str(data.get("bbox"))
+        bbox=str(data.get("bbox")),
+        zone=data.get("zone", "none"),
+
+        # ✅ NEW FIELDS
+        entry_count=data.get("entry_count", 0),
+        exit_count=data.get("exit_count", 0)
     )
 
     db.add(new_det)
@@ -28,6 +35,8 @@ def add_detection(data: dict):
 
     return {"message": "saved"}
 
+
+# -------------------- GET --------------------
 @app.get("/detections")
 def get_detections():
 
@@ -43,7 +52,12 @@ def get_detections():
             "object": d.object_type,
             "confidence": d.confidence,
             "track_id": d.track_id,
-            "bbox": d.bbox
+            "bbox": d.bbox,
+            "zone": d.zone,
+
+            # ✅ NEW FIELDS
+            "entry_count": d.entry_count,
+            "exit_count": d.exit_count
         })
 
     db.close()
