@@ -20,11 +20,11 @@ Open **3 terminals**
 
 Terminal 1 – Start Backend API
 
-Run this: uvicorn backend.main:app --reload
+Run this: python -m uvicorn backend.main:app --reload
 
 Terminal 2 – Start Computer Vision Engine
 
-Run this: python cv_engine/camera.py
+Run this: python -m cv_engine.detection
 
 Terminal 3 – Start Dashboard
 
