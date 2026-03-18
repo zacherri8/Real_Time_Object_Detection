@@ -171,7 +171,7 @@ while True:
             det_class = int(track.det_class)
             det_conf = float(track.det_conf)
             name = model.names[det_class]
-            if name not in ["person", "cell phone"]:
+            if name not in ["person", "cell phone", "lighter"]:
                 continue
 
             x1, y1, x2, y2 = bbox
