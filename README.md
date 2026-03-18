@@ -91,23 +91,32 @@ Handles real-time updates
 **🗂️ Project Structure**
 
 VisionGuard_AI/
+
 ├── backend/
+
 │   ├── main.py              
 │   ├── models.py            
 │   └── database.py
 │
+
 ├── cv_engine/
+
 │   ├── detection.py         
 │   ├── camera.py           
 │   ├── tracker.py           
 │   └── alert.wav            
 │
+
 ├── dashboard/
+
 │   └── dashboard.py       
 │
+
 ├── stream/
+
 │   └── frame.jpg          
 │
+
 ├── run_all.py               
 └── requirements.txt
 └── test_camera.py
@@ -126,11 +135,17 @@ Windows / Linux
 Install dependencies:
 
 pip install ultralytics
+
 pip install opencv-python
+
 pip install fastapi uvicorn
+
 pip install streamlit
+
 pip install sqlalchemy
+
 pip install numpy pandas plotly
+
 pip install pygame
 
 **▶️ Running the Project**
@@ -141,15 +156,15 @@ Run this command: python run_all.py
 
 **🧪 Three Terminals**
 
-# Terminal 1
+**Terminal 1**
 
 Run this command: python -m uvicorn backend.main:app --reload
 
-# Terminal 2
+**Terminal 2**
 
 Run this command: python -m cv_engine.detection
 
-# Terminal 3
+**Terminal 3**
 
 Run this command: streamlit run dashboard/dashboard.py
 
@@ -224,5 +239,6 @@ Video recording on intrusion
 **👨‍💻 Author**
 
 Satyam Chattopadhyay
+
 BTech | Computer Vision & AI Enthusiast
 
